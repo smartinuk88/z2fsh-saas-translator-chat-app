@@ -7,15 +7,15 @@ function UserAvatar({
   image,
   className,
 }: {
-  name: string;
-  image: string;
+  name?: string | null;
+  image?: string | null;
   className?: string;
 }) {
   return (
     <Avatar className={cn("bg-white text-black", className)}>
       <Image
-        src={image}
-        alt={name}
+        src={image || ""}
+        alt={name || ""}
         width={40}
         height={40}
         referrerPolicy="no-referrer"
